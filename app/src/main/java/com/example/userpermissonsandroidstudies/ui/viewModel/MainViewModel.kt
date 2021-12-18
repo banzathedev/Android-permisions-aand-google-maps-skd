@@ -1,4 +1,4 @@
-package com.example.userpermissonsandroidstudies.ui.main
+package com.example.userpermissonsandroidstudies.ui.viewModel
 
 import androidx.lifecycle.ViewModel
 

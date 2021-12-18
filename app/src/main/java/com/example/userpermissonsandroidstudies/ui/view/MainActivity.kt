@@ -1,8 +1,8 @@
-package com.example.userpermissonsandroidstudies
+package com.example.userpermissonsandroidstudies.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.userpermissonsandroidstudies.ui.main.MainFragment
+import com.example.userpermissonsandroidstudies.R
 
 class MainActivity : AppCompatActivity() {
 
