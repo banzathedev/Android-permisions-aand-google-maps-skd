@@ -29,7 +29,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding true
     }
 }
@@ -48,9 +48,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //koin
-    def koin_version = "3.1.4"
-    implementation "io.insert-koin:koin-core:$koin_version"
-    testImplementation "io.insert-koin:koin-test:$koin_version"
+    def koin_version = "2.0.1"
+    implementation "org.koin:koin-android:$koin_version"
 
     //coroutines
     def coroutines_version = "1.5.0"
@@ -68,4 +67,11 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glide_version"
     annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
 
+    //maps
+    def maps_version = "18.0.0"
+    implementation "com.google.android.gms:play-services-location:$maps_version"
+
+    //multiDex
+    def multidexVersion = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidexVersion"
 }
