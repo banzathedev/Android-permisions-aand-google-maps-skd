@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="tittle_size_18sp">18sp</dimen>
+    <dimen name="tittle_18sp">18sp</dimen>
+    <dimen name="large_text_size_16dp">16sp</dimen>
 </resources>

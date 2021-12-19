@@ -1,13 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.view.OnboardingFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gld_onboarding_fragment_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gld_onboarding_fragment_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+
+    <ImageView
+        android:id="@+id/iv_onboarding_fragment_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.9"
+        android:background="@color/black_translucent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_onboarding_fragment_tittle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/localiza_app"
+        android:textColor="@color/white"
+        android:textSize="@dimen/tittle_18sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_onboarding_fragment_disclaimer"
+        app:layout_constraintEnd_toStartOf="@id/gld_onboarding_fragment_end"
+        app:layout_constraintStart_toStartOf="@id/gld_onboarding_fragment_start" />
+
+    <TextView
+        android:id="@+id/tv_onboarding_fragment_disclaimer"
+        style="@style/regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/onboarding_disclaimer"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_text_size_16dp"
+        app:layout_constraintBottom_toTopOf="@+id/start_home_button"
+        app:layout_constraintEnd_toStartOf="@+id/gld_onboarding_fragment_end"
+        app:layout_constraintStart_toStartOf="@+id/gld_onboarding_fragment_start" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start_home_button"
+        style="@style/button_default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/start_button"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gld_onboarding_fragment_end"
+        app:layout_constraintStart_toStartOf="@+id/gld_onboarding_fragment_start" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
