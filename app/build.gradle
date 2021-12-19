@@ -49,7 +49,9 @@ dependencies {
 
     //koin
     def koin_version = "2.0.1"
-    implementation "org.koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-android-viewmodel:$koin_version"
+    implementation "io.insert-koin:koin-android-scope:$koin_version"
+    implementation "io.insert-koin:koin-android:$koin_version"
 
     //coroutines
     def coroutines_version = "1.5.0"
