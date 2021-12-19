@@ -8,26 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.userpermissonsandroidstudies.R
 import com.example.userpermissonsandroidstudies.ui.viewModel.OnboardingViewModel
+import org.koin.android.ext.android.inject
 
-class OnboardingFragment : Fragment() {
+class OnboardingFragment : Fragment(R.layout.onboarding_fragment) {
 
     companion object {
         fun newInstance() = OnboardingFragment()
     }
 
-    private lateinit var viewModel: OnboardingViewModel
+    private val viewModel: OnboardingViewModel by inject()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.onboarding_fragment, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(OnboardingViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
 }
